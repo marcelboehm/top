@@ -1,9 +1,7 @@
-var map = L.map('map').setView([-44.697222, 169.135278], 13);
-
+var map = L.map('map').setView([34.0968, 77.35], 9);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-
-L.marker([-44.697222, 169.135278]).addTo(map)
-    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-    .openPopup();
+var marker = L.marker([34.0968, 77.35]).addTo(map);
+marker.bindPopup("<b>Hola!</b><br>Ich bin in Ladakh.").openPopup();
